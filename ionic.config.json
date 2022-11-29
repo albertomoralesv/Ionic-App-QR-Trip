@@ -1,0 +1,7 @@
+{
+  "name": "QrTrip",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
