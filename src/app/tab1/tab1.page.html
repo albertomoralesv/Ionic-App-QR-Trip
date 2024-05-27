@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title class="ion-text-center">
+      Claves
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,43 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large" class="ion-text-center">Claves</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-hide-sm-down">
+        <h2 class="tableTitle">Sin Generar</h2>
+      </ion-col>
+      <ion-col class="ion-hide-sm-down">
+        <h2 class="tableTitle">Generados</h2>
+      </ion-col>
+      <ion-col class="ion-hide-sm-down">
+        <h2 class="tableTitle">Utilizados</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row class="keysTable">
+      <ion-col class="ion-hide-sm-up tableCol">
+        <ion-accordion-group multiple="true">
+          <app-key *ngFor="let keyItem of listaClaves" [key]="keyItem[0]" [status]="keyItem[1].Status" [user]="keyItem[1].Usuario" [latitud]="keyItem[1].Ubicacion.Latitud" [longitud]="keyItem[1].Ubicacion.Longitud" [column]="keyItem[1].Status" [bigScreen]="true"></app-key>
+        </ion-accordion-group>
+      </ion-col>
+      <ion-col class="ion-hide-sm-down tableCol">
+        <ion-accordion-group multiple="true" [readonly]="true">
+          <app-key *ngFor="let keyItem of listaClaves" [key]="keyItem[0]" [status]="keyItem[1].Status" [user]="keyItem[1].Usuario" [latitud]="keyItem[1].Ubicacion.Latitud" [longitud]="keyItem[1].Ubicacion.Longitud" [column]="'Sin Generar'"></app-key>
+        </ion-accordion-group>
+      </ion-col>
+      <ion-col class="ion-hide-sm-down tableCol">
+        <ion-accordion-group multiple="true">
+          <app-key *ngFor="let keyItem of listaClaves" [key]="keyItem[0]" [status]="keyItem[1].Status" [user]="keyItem[1].Usuario" [latitud]="keyItem[1].Ubicacion.Latitud" [longitud]="keyItem[1].Ubicacion.Longitud" [column]="'Generado'"></app-key>
+        </ion-accordion-group>
+      </ion-col>
+      <ion-col class="ion-hide-sm-down tableCol">
+        <ion-accordion-group multiple="true">
+          <app-key *ngFor="let keyItem of listaClaves" [key]="keyItem[0]" [status]="keyItem[1].Status" [user]="keyItem[1].Usuario" [latitud]="keyItem[1].Ubicacion.Latitud" [longitud]="keyItem[1].Ubicacion.Longitud" [column]="'Utilizado'"></app-key>
+        </ion-accordion-group>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

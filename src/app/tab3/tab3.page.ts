@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { DatabaseService } from '../database.service';
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -7,6 +9,11 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor(private databaseService: DatabaseService) {}
+
+  add(){
+    this.databaseService.addKey();
+    
+  }
 
 }

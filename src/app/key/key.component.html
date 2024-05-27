@@ -1,0 +1,25 @@
+<ion-accordion *ngIf="column === status" toggleIcon="help-circle-outline"> toggleIconSlot="end">
+  <ion-item slot="header" color="dark">
+    <ion-label>
+      <h2 class="key">{{ key }}</h2>
+      <h3 class="status" *ngIf="bigScreen === true">{{ status }}</h3>
+    </ion-label>
+  </ion-item>
+  <div *ngIf="status !== 'Sin Generar'" slot="content" style="background-color: lightcoral;">
+    <ion-grid>
+      <ion-row style="border-bottom-style: solid ; border-bottom-color: black;">
+        <ion-col>
+          <span style="font-weight: bold;">Usuario:</span> {{user}}
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="status === 'Utilizado'">
+        <ion-col>
+          <span style="font-weight: bold;">Latitud:</span> {{latitud}}
+        </ion-col>
+        <ion-col>
+          <span style="font-weight: bold;">Longitud:</span> {{longitud}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-accordion>

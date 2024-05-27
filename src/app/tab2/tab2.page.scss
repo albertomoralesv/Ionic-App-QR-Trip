@@ -1,0 +1,51 @@
+ion-toolbar{
+    --background: pink;
+}
+
+ion-title{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+ion-content{
+    --background: lightyellow;
+}
+
+ion-grid{
+    background-color: purple;
+    min-height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ion-row{
+    background-color: yellow;
+}
+
+ion-col{
+    background-color: brown;
+    margin: 5px;
+    text-align: center;
+}
+
+.keysTable{
+    margin-top: 2px;
+}
+
+.tableCol::-webkit-scrollbar {
+    display: none;
+}
+
+.tableCol{
+    height: 50vh;
+    max-height: 50vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+ion-accordion{
+    margin-bottom: 2px;
+}

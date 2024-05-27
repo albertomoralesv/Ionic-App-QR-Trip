@@ -1,1 +1,14 @@
+.labels{
+    background-color: aqua;
+    min-width: 50px;
+    max-width: 150px;
+}
+ion-tab-button{
+    margin-inline: 5%;
+    border-radius: 10%;
+}
 
+.labels:focus{
+    background-color: lightgreen;
+    color: black;
+}

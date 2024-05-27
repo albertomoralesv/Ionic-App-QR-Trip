@@ -1,0 +1,25 @@
+<ion-accordion toggleIcon="information-circle-outline" toggleIconSlot="end">
+  <ion-item slot="header" color="dark">
+    <ion-label>
+      <h2 class="userName">{{ name + ' ' + lastName }}</h2>
+      <h3 class="career">{{ career }}</h3>
+    </ion-label>
+  </ion-item>
+  <div slot="content" style="background-color: lightcoral;" class="ion-no-padding">
+    <ion-grid>
+      <ion-row style="border-bottom-style: solid ; border-bottom-color: black;">
+        <ion-col>
+          <span class="extraInfo" style="font-weight: bold;">ID: </span> <span class="extraInfo">{{id}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row style="justify-content: space-around;">
+        <ion-col>
+          <span class="extraInfo" style="font-weight: bold;">Email: </span> <span class="extraInfo">{{email}}</span>
+        </ion-col>
+        <ion-col>
+          <span class="extraInfo" style="font-weight: bold;">Semester: </span> <span class="extraInfo">{{semester}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-accordion>

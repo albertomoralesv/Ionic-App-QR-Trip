@@ -1,0 +1,32 @@
+ion-content {
+    --ion-background-color: var(--ion-color-primary); 
+}
+
+ion-grid{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+ion-row{
+    max-height: 16.66%;
+}
+
+ion-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+ion-img{
+    height: 100%;
+}
+
+.divider{
+    border-top-style: solid;
+    border-top-color: var(--ion-color-secondary);
+    border-top-width: 1px;
+
+}

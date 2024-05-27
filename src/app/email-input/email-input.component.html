@@ -1,0 +1,7 @@
+<ion-item fill="outline" class="customItem">
+  <ion-label position="stacked" color="secondary">
+    <ion-icon name="mail-outline"></ion-icon>
+    Email
+  </ion-label>
+  <ion-input #email="ngModel" [(ngModel)]="userEmail" email (ionChange)="emit(!email.invalid)" maxlength="100" type="email" placeholder="email@domain.com" class="customInput" ></ion-input>
+</ion-item>

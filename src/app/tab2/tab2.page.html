@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
+    <ion-title class="ion-text-center">
+      Usuarios
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large" class="ion-text-center">Usuarios</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row class="keysTable">
+      <ion-col class="tableCol">
+        <ion-accordion-group multiple="true">
+          <app-user *ngFor="let keyItem of listaUsuarios" [id]="keyItem[0]" [name]="keyItem[1].Nombre" [lastName]="keyItem[1].Apellido" [email]="keyItem[1].Email" [career]="keyItem[1].Carrera" [semester]="keyItem[1].Semestre"></app-user>
+        </ion-accordion-group>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

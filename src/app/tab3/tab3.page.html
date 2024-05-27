@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title class="ion-text-center">
+      Agregar Claves
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-grid>
+    <ion-button (click)="add()">Agregar Clave</ion-button>
+  </ion-grid>
 </ion-content>
